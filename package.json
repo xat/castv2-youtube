@@ -1,0 +1,23 @@
+{
+  "name": "castv2-youtube",
+  "version": "0.0.1",
+  "description": "castv2-client youtube receiver",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "youtube",
+    "chromecast",
+    "castv2"
+  ],
+    "repository": {
+    "type": "git",
+    "url": "git@github.com:xat/castv2-youtube.git"
+  },
+  "author": "Simon Kusterer",
+  "license": "MIT",
+  "dependencies": {
+    "castv2-client": "0.0.6"
+  }
+}
