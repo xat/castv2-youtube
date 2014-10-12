@@ -4,7 +4,7 @@ var Application       = castv2Cli.Application;
 var MediaController   = castv2Cli.MediaController;
 var YoutubeController = require('./YoutubeController');
 
-function YoutubeReceiver(client, session) {
+function Youtube(client, session) {
   Application.apply(this, arguments);
 
   this.media = this.createController(MediaController);
@@ -20,32 +20,32 @@ function YoutubeReceiver(client, session) {
 
 }
 
-YoutubeReceiver.APP_ID = '233637DE';
+Youtube.APP_ID = '233637DE';
 
-util.inherits(YoutubeReceiver, Application);
+util.inherits(Youtube, Application);
 
-YoutubeReceiver.prototype.getStatus = function(callback) {
+Youtube.prototype.getStatus = function(callback) {
   this.media.getStatus.apply(this.media, arguments);
 };
 
-YoutubeReceiver.prototype.load = function(videoId) {
+Youtube.prototype.load = function(videoId) {
   this.youtube.load.apply(this.youtube, arguments);
 };
 
-YoutubeReceiver.prototype.play = function(callback) {
+Youtube.prototype.play = function(callback) {
   this.media.play.apply(this.media, arguments);
 };
 
-YoutubeReceiver.prototype.pause = function(callback) {
+Youtube.prototype.pause = function(callback) {
   this.media.pause.apply(this.media, arguments);
 };
 
-YoutubeReceiver.prototype.stop = function(callback) {
+Youtube.prototype.stop = function(callback) {
   this.media.stop.apply(this.media, arguments);
 };
 
-YoutubeReceiver.prototype.seek = function(currentTime, callback) {
+Youtube.prototype.seek = function(currentTime, callback) {
   this.media.seek.apply(this.media, arguments);
 };
 
-module.exports = YoutubeReceiver;
+module.exports = Youtube;

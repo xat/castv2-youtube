@@ -1,12 +1,12 @@
 ## castv2-youtube
 
-castv2-client youtube receiver.
+castv2-client youtube sender.
 
 ### Sample
 
 ```javascript
 var Client                = require('castv2-client').Client;
-var YoutubeReceiver       = require('castv2-youtube').YoutubeReceiver;
+var Youtube               = require('castv2-youtube').Youtube;
 var mdns                  = require('mdns');
 
 var browser = mdns.createBrowser(mdns.tcp('googlecast'));
@@ -24,7 +24,7 @@ function ondeviceup(host) {
   var client = new Client();
   client.connect(host, function() {
     console.log('connected, launching app ...');
-    client.launch(YoutubeReceiver, function(err, player) {
+    client.launch(Youtube, function(err, player) {
       player.load('69V__a49xtw');
     });
   });
