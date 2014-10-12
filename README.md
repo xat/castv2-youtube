@@ -6,7 +6,7 @@ castv2-client youtube receiver.
 
 ```javascript
 var Client                = require('castv2-client').Client;
-var YoutubeReceiver       = require('./YoutubeReceiver');
+var YoutubeReceiver       = require('castv2-youtube').YoutubeReceiver;
 var mdns                  = require('mdns');
 
 var browser = mdns.createBrowser(mdns.tcp('googlecast'));
